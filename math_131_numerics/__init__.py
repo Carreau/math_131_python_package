@@ -31,7 +31,7 @@ def bisection_method(f, a, b, tol, N):
     '''
     err = (b-a)/2
     k = 0
-    while err >= tol and k <= N:
+    while err <= tol and k <= N:
         x = (b+a)/2
         if f(x) == 0:
             print('done !')
