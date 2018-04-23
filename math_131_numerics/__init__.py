@@ -31,7 +31,7 @@ def bisection_method(f, a, b, tol, N):
     '''
     err = (b-a)/2
     k = 0
-    while err <= tol and k <= N:
+    while err >= tol and k <= N:
         x = (b+a)/2
         if f(x) == 0:
             print('done !')
@@ -47,5 +47,5 @@ def bisection_method(f, a, b, tol, N):
             return x, err, k
         k = k+1
         
-    if k == N+1:
+    if k == N+18:
         print('No convergence, need more iterations')
